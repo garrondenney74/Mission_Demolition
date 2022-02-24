@@ -31,6 +31,7 @@ public class FollowCam : MonoBehaviour
 
     private void Awake()
     {
+        S = this;
         camZ = this.transform.position.z;
     }//end Awake()
     // Start is called before the first frame update

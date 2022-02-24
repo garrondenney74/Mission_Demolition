@@ -36,7 +36,7 @@ public class Slingshot : MonoBehaviour
 
         // Instantiate a Projectile
 
-        projectile = Instantiate( prefabProjectile ) as GameObject;
+        projectile = Instantiate(prefabProjectile) as GameObject;
 
         // Start it at the launchPoint
 
@@ -98,6 +98,7 @@ public class Slingshot : MonoBehaviour
             aimingMode = false;
             projectile.GetComponent<Rigidbody>().isKinematic = false;
             projectile.GetComponent<Rigidbody>().velocity = -mouseDelta * velocityMult;
+            FollowCam.poi = projectile;
             projectile = null;
         }
 
