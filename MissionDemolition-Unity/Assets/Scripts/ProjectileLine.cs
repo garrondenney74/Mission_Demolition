@@ -1,3 +1,12 @@
+/***
+ * Created by Garron Denney
+ * Date Created: 2/24/21
+ * Last Edited by: N/A
+ * Last Date Edited 2/24/21
+ * Code for constructing the follow path of the projectile
+ * 
+ ***/
+ 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,3 +1,11 @@
+/***
+ * Created by Garron Denney
+ * Date Created: 2/24/21
+ * Last Edited by: N/A
+ * Last Date Edited 2/24/21
+ * Code for the goal trigger
+ * 
+ ***/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
