@@ -40,7 +40,7 @@ public class FollowCam : MonoBehaviour
     {
         //if no point of interest exit update
 
-        Vector3 destination = poi.transform.position;
+        Vector3 destination;
         if (poi == null)
         {
             destination = Vector3.zero;
@@ -53,6 +53,7 @@ public class FollowCam : MonoBehaviour
                 if(poi.GetComponent<Rigidbody>().IsSleeping())
                 {
                     poi = null;
+                    return;
                 }
             }//end if(POI.tag == "Projectile")
 
