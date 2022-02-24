@@ -15,8 +15,10 @@ using UnityEngine;
 
 public class FollowCam : MonoBehaviour
 {
+    static public FollowCam S;
+
     /***Variables***/
-    static public GameObject POI; //static point of interest
+    static public GameObject poi; //static point of interest
     [Header("Set in Inspector")]
     public float easing = 0.05f;//Amount of ease
     public Vector2 minXY = Vector2.zero;
@@ -37,19 +39,19 @@ public class FollowCam : MonoBehaviour
     {
         //if no point of interest exit update
 
-        Vector3 destination = POI.transform.position;
-        if (POI == null)
+        Vector3 destination = poi.transform.position;
+        if (poi == null)
         {
             destination = Vector3.zero;
         }
         else
         {
-            destination = POI.transform.position;
-            if(POI.tag == "Projectile")
+            destination = poi.transform.position;
+            if(poi.tag == "Projectile")
             {
-                if(POI.GetComponent<Rigidbody>().IsSleeping())
+                if(poi.GetComponent<Rigidbody>().IsSleeping())
                 {
-                    POI = null;
+                    poi = null;
                 }
             }//end if(POI.tag == "Projectile")
 
